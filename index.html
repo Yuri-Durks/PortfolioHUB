@@ -2,117 +2,170 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioHUB</title>
 
-<title>Gerenciador de Tarefas</title>
+    <style>
 
-<style>
+        body{
+            margin:0;
+            padding:0;
+            background:#0f172a;
+            color:white;
+            font-family:Arial, sans-serif;
+            text-align:center;
+        }
 
-body{
-    background:#0f172a;
-    font-family:Arial;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
-}
+        header{
+            padding:60px 20px;
+        }
 
-.container{
-    background:#1e293b;
-    padding:30px;
-    border-radius:20px;
-    width:320px;
-    text-align:center;
-}
+        h1{
+            font-size:50px;
+            color:#38bdf8;
+            margin-bottom:10px;
+        }
 
-h1{
-    color:#38bdf8;
-}
+        p{
+            color:#cbd5e1;
+            font-size:18px;
+        }
 
-p{
-    color:#cbd5e1;
-}
+        .sobre{
+            max-width:700px;
+            margin:auto;
+            margin-top:30px;
+        }
 
-input{
-    width:90%;
-    padding:10px;
-    margin-top:15px;
-    border:none;
-    border-radius:10px;
-}
+        .container{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:25px;
+            padding:30px;
+        }
 
-button{
-    margin-top:15px;
-    padding:10px 20px;
-    border:none;
-    border-radius:10px;
-    background:#38bdf8;
-    color:white;
-    cursor:pointer;
-}
+        .card{
+            background:#1e293b;
+            width:320px;
+            padding:25px;
+            border-radius:20px;
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
 
-ul{
-    margin-top:20px;
-    padding:0;
-    list-style:none;
-}
+        .card:hover{
+            transform:translateY(-5px);
+        }
 
-li{
-    background:#334155;
-    margin-top:10px;
-    padding:10px;
-    border-radius:10px;
-}
+        .card h2{
+            color:#38bdf8;
+        }
 
-</style>
+        .botao{
+            display:inline-block;
+            margin-top:15px;
+            padding:12px 20px;
+            background:#38bdf8;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-weight:bold;
+        }
+
+        .botao:hover{
+            opacity:0.8;
+        }
+
+        section{
+            margin-top:40px;
+            padding:20px;
+        }
+
+        footer{
+            margin-top:50px;
+            padding:20px;
+            color:gray;
+        }
+
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+    <header>
 
-    <h1>Gerenciador de Tarefas</h1>
+        <h1>PortfolioHUB</h1>
 
-    <p>
-        Organize suas tarefas diárias.
-    </p>
+        <p>
+            Repositório acadêmico e profissional utilizando GitHub Pages
+        </p>
 
-    <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+        <div class="sobre">
 
-    <br>
+            <h2>Sobre Mim</h2>
 
-    <button onclick="adicionar()">
-        Adicionar
-    </button>
+            <p>
+                Estudante desenvolvendo projetos acadêmicos e pessoais
+                utilizando HTML, CSS, JavaScript, Git e GitHub.
+            </p>
 
-    <ul id="lista"></ul>
+        </div>
 
-</div>
+    </header>
 
-<script>
+    <div class="container">
 
-function adicionar(){
+        <div class="card">
 
-    let tarefa = document.getElementById("tarefa").value;
+            <h2>Sistema de Cálculo Web</h2>
 
-    if(tarefa == ""){
-        return;
-    }
+            <p>
+                Projeto acadêmico desenvolvido utilizando HTML, CSS e JavaScript.
+            </p>
 
-    let item = document.createElement("li");
+            <a class="botao"
+               href="./projetos-academicos/calculadora/index.html">
 
-    item.innerText = tarefa;
+               Abrir Projeto
 
-    document.getElementById("lista").appendChild(item);
+            </a>
 
-    document.getElementById("tarefa").value = "";
+        </div>
 
-}
+        <div class="card">
 
-</script>
+            <h2>Gerenciador de Tarefas</h2>
+
+            <p>
+                Aplicação simples para organização de tarefas diárias.
+            </p>
+
+            <a class="botao"
+               href="./projetos-pessoais/todolist/index.html">
+
+               Abrir Projeto
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <section>
+
+        <h2>Tecnologias</h2>
+
+        <p>
+            HTML5 • CSS3 • JavaScript • Git • GitHub
+        </p>
+
+    </section>
+
+    <footer>
+        Desenvolvido para atividade acadêmica
+    </footer>
 
 </body>
 
