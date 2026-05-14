@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>To-Do List</title>
+
+<title>Gerenciador de Tarefas</title>
 
 <style>
 
@@ -15,6 +17,7 @@ body{
     align-items:center;
     height:100vh;
     color:white;
+    margin:0;
 }
 
 .container{
@@ -22,24 +25,66 @@ body{
     padding:30px;
     border-radius:20px;
     width:350px;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+h1{
+    color:#38bdf8;
+    text-align:center;
+}
+
+.descricao{
+    text-align:center;
+    color:#cbd5e1;
+    font-size:15px;
+}
+
+.info{
+    text-align:center;
+    color:gray;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.area-input{
+    display:flex;
+    gap:10px;
 }
 
 input{
-    width:70%;
+    flex:1;
     padding:10px;
     border:none;
     border-radius:10px;
+    outline:none;
 }
 
 button{
-    padding:10px;
+    padding:10px 15px;
     border:none;
     border-radius:10px;
     cursor:pointer;
+    background:#38bdf8;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
 }
 
 li{
+    background:#334155;
+    padding:10px;
     margin-top:10px;
+    border-radius:10px;
 }
 
 </style>
@@ -49,21 +94,27 @@ li{
 
 <div class="container">
 
-<h1>Lista de Tarefas</h1>
-    <p style="font-size:16px; color:#cbd5e1;">
-    Organize suas tarefas diárias de forma simples e prática.
-</p>
+    <h1>Gerenciador de Tarefas</h1>
 
-<p style="font-size:14px; color:gray;">
-    Nenhuma tarefa adicionada no momento.
-</p>
+    <p class="descricao">
+        Organize suas tarefas diárias de forma simples e prática.
+    </p>
 
-<input type="text" id="tarefa" placeholder="Digite uma tarefa">
-<button onclick="adicionar()">
-    + Adicionar
-</button>
-    
-<ul id="lista"></ul>
+    <p class="info">
+        Nenhuma tarefa adicionada no momento.
+    </p>
+
+    <div class="area-input">
+
+        <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+
+        <button onclick="adicionar()">
+            + Adicionar
+        </button>
+
+    </div>
+
+    <ul id="lista"></ul>
 
 </div>
 
@@ -84,9 +135,11 @@ function adicionar(){
     document.getElementById("lista").appendChild(li);
 
     document.getElementById("tarefa").value = "";
+
 }
 
 </script>
 
 </body>
+
 </html>
