@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortfolioHUB</title>
 
     <style>
+
         body{
             margin:0;
             padding:0;
@@ -29,12 +31,25 @@
             color:#cbd5e1;
         }
 
+        .container{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:20px;
+            padding:20px;
+        }
+
         .card{
             background:#1e293b;
-            margin:20px auto;
             padding:20px;
             width:300px;
             border-radius:15px;
+        }
+
+        a{
+            color:#38bdf8;
+            text-decoration:none;
+            font-weight:bold;
         }
 
         footer{
@@ -42,6 +57,7 @@
             padding:20px;
             color:gray;
         }
+
     </style>
 </head>
 
@@ -49,37 +65,42 @@
 
     <header>
         <h1>PortfolioHUB</h1>
-        <p>Repositório acadêmico e profissional</p>
+
+        <p>
+            Repositório acadêmico e profissional utilizando GitHub Pages
+        </p>
     </header>
 
-    <div class="card">
-    <h2>Calculadora</h2>
+    <div class="container">
 
-    <p>
-        Mini projeto utilizando HTML, CSS e JavaScript.
-    </p>
+        <div class="card">
 
-    <a href="projetos-academicos/calculadora/" 
-       style="color:#38bdf8;">
-       Abrir Projeto
-    </a>
-</div>
-    <div class="card">
-    <h2>Lista de Tarefas</h2>
+            <h2>Calculadora</h2>
 
-    <p>
-        Projeto desenvolvido com HTML, CSS e JavaScript.
-    </p>
+            <p>
+                Mini projeto utilizando HTML, CSS e JavaScript.
+            </p>
 
-    <a href="projetos-pessoais/todolist/" 
-       style="color:#38bdf8;">
-       Abrir Projeto
-    </a>
-</div>
+            <a href="projetos-academicos/calculadora/">
+                Abrir Projeto
+            </a>
 
-    <div class="card">
-        <h2>Mini Projeto</h2>
-        <p>Página desenvolvida em HTML e CSS.</p>
+        </div>
+
+        <div class="card">
+
+            <h2>Lista de Tarefas</h2>
+
+            <p>
+                Projeto desenvolvido com HTML, CSS e JavaScript.
+            </p>
+
+            <a href="projetos-pessoais/todolist/">
+                Abrir Projeto
+            </a>
+
+        </div>
+
     </div>
 
     <footer>
@@ -87,4 +108,5 @@
     </footer>
 
 </body>
+
 </html>
