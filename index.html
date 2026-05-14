@@ -18,7 +18,7 @@
         }
 
         header{
-            padding:60px;
+            padding:60px 20px;
         }
 
         h1{
@@ -44,12 +44,22 @@
             padding:20px;
             width:300px;
             border-radius:15px;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.05);
         }
 
         a{
             color:#38bdf8;
             text-decoration:none;
             font-weight:bold;
+        }
+
+        section{
+            margin-top:50px;
+            padding:20px;
         }
 
         footer{
@@ -64,11 +74,24 @@
 <body>
 
     <header>
+
         <h1>PortfolioHUB</h1>
 
         <p>
             Repositório acadêmico e profissional utilizando GitHub Pages
         </p>
+
+        <div style="margin-top:30px;">
+
+            <h2>Sobre Mim</h2>
+
+            <p style="max-width:700px; margin:auto;">
+                Estudante desenvolvendo projetos acadêmicos e pessoais
+                utilizando HTML, CSS, JavaScript, Git e GitHub.
+            </p>
+
+        </div>
+
     </header>
 
     <div class="container">
@@ -102,6 +125,16 @@
         </div>
 
     </div>
+
+    <section>
+
+        <h2>Tecnologias</h2>
+
+        <p>
+            HTML5 • CSS3 • JavaScript • Git • GitHub
+        </p>
+
+    </section>
 
     <footer>
         Desenvolvido para atividade acadêmica
