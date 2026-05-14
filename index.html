@@ -2,143 +2,117 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortfolioHUB</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>Gerenciador de Tarefas</title>
 
-        body{
-            margin:0;
-            padding:0;
-            background:#0f172a;
-            color:white;
-            font-family:Arial;
-            text-align:center;
-        }
+<style>
 
-        header{
-            padding:60px 20px;
-        }
+body{
+    background:#0f172a;
+    font-family:Arial;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
 
-        h1{
-            font-size:50px;
-            color:#38bdf8;
-        }
+.container{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    width:320px;
+    text-align:center;
+}
 
-        p{
-            font-size:20px;
-            color:#cbd5e1;
-        }
+h1{
+    color:#38bdf8;
+}
 
-        .container{
-            display:flex;
-            justify-content:center;
-            flex-wrap:wrap;
-            gap:20px;
-            padding:20px;
-        }
+p{
+    color:#cbd5e1;
+}
 
-        .card{
-            background:#1e293b;
-            padding:20px;
-            width:300px;
-            border-radius:15px;
-            transition:0.3s;
-        }
+input{
+    width:90%;
+    padding:10px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+}
 
-        .card:hover{
-            transform:scale(1.05);
-        }
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    cursor:pointer;
+}
 
-        a{
-            color:#38bdf8;
-            text-decoration:none;
-            font-weight:bold;
-        }
+ul{
+    margin-top:20px;
+    padding:0;
+    list-style:none;
+}
 
-        section{
-            margin-top:50px;
-            padding:20px;
-        }
+li{
+    background:#334155;
+    margin-top:10px;
+    padding:10px;
+    border-radius:10px;
+}
 
-        footer{
-            margin-top:50px;
-            padding:20px;
-            color:gray;
-        }
-
-    </style>
+</style>
 </head>
 
 <body>
 
-    <header>
+<div class="container">
 
-        <h1>PortfolioHUB</h1>
+    <h1>Gerenciador de Tarefas</h1>
 
-        <p>
-            Repositório acadêmico e profissional utilizando GitHub Pages
-        </p>
+    <p>
+        Organize suas tarefas diárias.
+    </p>
 
-        <div style="margin-top:30px;">
+    <input type="text" id="tarefa" placeholder="Digite uma tarefa">
 
-            <h2>Sobre Mim</h2>
+    <br>
 
-            <p style="max-width:700px; margin:auto;">
-                Estudante desenvolvendo projetos acadêmicos e pessoais
-                utilizando HTML, CSS, JavaScript, Git e GitHub.
-            </p>
+    <button onclick="adicionar()">
+        Adicionar
+    </button>
 
-        </div>
+    <ul id="lista"></ul>
 
-    </header>
+</div>
 
-    <div class="container">
+<script>
 
-        <div class="card">
+function adicionar(){
 
-            <h2>Calculadora</h2>
+    let tarefa = document.getElementById("tarefa").value;
 
-            <p>
-                Mini projeto utilizando HTML, CSS e JavaScript.
-            </p>
+    if(tarefa == ""){
+        return;
+    }
 
-            <a href="projetos-academicos/calculadora/">
-                Abrir Projeto
-            </a>
+    let item = document.createElement("li");
 
-        </div>
+    item.innerText = tarefa;
 
-        <div class="card">
+    document.getElementById("lista").appendChild(item);
 
-            <h2>Lista de Tarefas</h2>
+    document.getElementById("tarefa").value = "";
 
-            <p>
-                Projeto desenvolvido com HTML, CSS e JavaScript.
-            </p>
+}
 
-            <a href="projetos-pessoais/todolist/">
-                Abrir Projeto
-            </a>
-
-        </div>
-
-    </div>
-
-    <section>
-
-        <h2>Tecnologias</h2>
-
-        <p>
-            HTML5 • CSS3 • JavaScript • Git • GitHub
-        </p>
-
-    </section>
-
-    <footer>
-        Desenvolvido para atividade acadêmica
-    </footer>
+</script>
 
 </body>
 
