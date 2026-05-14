@@ -1,139 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gerenciador de Tarefas</title>
-
-<style>
-
-body{
-    background:#0f172a;
-    font-family:Arial;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    color:white;
-    margin:0;
-}
-
-.container{
-    background:#1e293b;
-    padding:30px;
-    border-radius:20px;
-    width:350px;
-    box-shadow:0 0 20px rgba(0,0,0,0.4);
-}
-
-h1{
-    color:#38bdf8;
-    text-align:center;
-}
-
-.descricao{
-    text-align:center;
-    color:#cbd5e1;
-    font-size:15px;
-}
-
-.info{
-    text-align:center;
-    color:gray;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.area-input{
-    display:flex;
-    gap:10px;
-}
-
-input{
-    flex:1;
-    padding:10px;
-    border:none;
-    border-radius:10px;
-    outline:none;
-}
-
-button{
-    padding:10px 15px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    background:#38bdf8;
-    color:white;
-    font-weight:bold;
-}
-
-ul{
-    list-style:none;
-    padding:0;
-    margin-top:20px;
-}
-
-li{
-    background:#334155;
-    padding:10px;
-    margin-top:10px;
-    border-radius:10px;
-}
-
-</style>
+    <title>Lista de Tarefas</title>
 </head>
 
-<body>
-
-<div class="container">
+<body style="background:#0f172a; color:white; font-family:Arial; text-align:center;">
 
     <h1>Gerenciador de Tarefas</h1>
 
-    <p class="descricao">
-        Organize suas tarefas diárias de forma simples e prática.
-    </p>
+    <p>Projeto funcionando com GitHub Pages.</p>
 
-    <p class="info">
-        Nenhuma tarefa adicionada no momento.
-    </p>
+    <input id="tarefa" placeholder="Digite uma tarefa">
 
-    <div class="area-input">
-
-        <input type="text" id="tarefa" placeholder="Digite uma tarefa">
-
-        <button onclick="adicionar()">
-            + Adicionar
-        </button>
-
-    </div>
+    <button onclick="adicionar()">
+        Adicionar
+    </button>
 
     <ul id="lista"></ul>
 
-</div>
+    <script>
 
-<script>
+        function adicionar(){
 
-function adicionar(){
+            let tarefa = document.getElementById("tarefa").value;
 
-    let tarefa = document.getElementById("tarefa").value;
+            let item = document.createElement("li");
 
-    if(tarefa === ""){
-        return;
-    }
+            item.innerText = tarefa;
 
-    let li = document.createElement("li");
+            document.getElementById("lista").appendChild(item);
 
-    li.innerText = tarefa;
+        }
 
-    document.getElementById("lista").appendChild(li);
-
-    document.getElementById("tarefa").value = "";
-
-}
-
-</script>
+    </script>
 
 </body>
 
