@@ -45,4 +45,4 @@ Repositório criado para armazenar projetos acadêmicos e pessoais utilizando Gi
 
 ## Autor
 
-Yuri Durks
+Yuri Durks dos Santos
