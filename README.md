@@ -39,7 +39,7 @@ Repositório criado para armazenar projetos acadêmicos e pessoais utilizando Gi
 
 - GitHub: https://github.com/Yuri-Durks
 - GitHub Pages: https://yuri-durks.github.io/PortfolioHUB/
-- LinkedIn: linkedin.com/in/yuri-durks-dos-santos-85102440a
+- LinkedIn: https://www.linkedin.com/in/yuri-durks-dos-santos-85102440a
 
 ---
 
