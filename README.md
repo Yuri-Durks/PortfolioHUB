@@ -1,6 +1,6 @@
 # PortfolioHUB
 
-![Banner](https://raw.githubusercontent.com/Yuri-Durks/PortfolioHUB/main/images/banner.png)
+![Banner](projetos-academicos/images/banner.png)
 
 Repositório criado para armazenar projetos acadêmicos e pessoais utilizando Git e GitHub, com foco em versionamento, organização e desenvolvimento de projetos.
 
