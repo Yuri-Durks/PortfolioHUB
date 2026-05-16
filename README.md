@@ -1,6 +1,6 @@
 # PortfolioHUB
 
-![Banner]([(https://chatgpt.com/s/m_6a089b9a91348191af030b93e629dab7])
+![Banner]([])
 
 Repositório criado para armazenar projetos acadêmicos e pessoais utilizando Git e GitHub, com foco em versionamento, organização e desenvolvimento de projetos.
 
