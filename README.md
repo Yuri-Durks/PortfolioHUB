@@ -1,6 +1,6 @@
 # PortfolioHUB
 
-![Banner](images/banner.png)
+![Banner](images/imagem.png)
 
 Repositório criado para armazenar projetos acadêmicos e pessoais utilizando Git e GitHub, com foco em versionamento, organização e desenvolvimento de projetos.
 
